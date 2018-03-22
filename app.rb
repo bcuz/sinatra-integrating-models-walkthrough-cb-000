@@ -10,7 +10,7 @@ class App < Sinatra::Base
     text_from_user = params[:user_text]
     text = TextAnalyzer.new(text_from_user)
 
-    puts text.most_used_letter
+    puts text.most_used_letter.keys[0]
     erb :results
   end
 end
